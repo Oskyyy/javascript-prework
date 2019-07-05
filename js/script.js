@@ -8,10 +8,10 @@ if(randomNumber == 1){
   computerMove = 'kamień';
 }
 else if(randomNumber == 2){
-	computerMove = 'papier'
+	computerMove = 'papier';
 }
 else(randomNumber == 3){
-	computerMove = 'nożyce'
+	computerMove = 'nożyce';
 }
 
 printMessage('Mój ruch to: ' + computerMove);
@@ -27,10 +27,24 @@ if(playerInput == '1'){
   playerMove = 'kamień';
 }
 else if(playerInput == '2'){
-	playerMove = 'papier'
+	playerMove = 'papier';
 }
 else(playerInput == '3'){
-	playerMove = 'nożyce'
+	playerMove = 'nożyce';
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+
+if(computerMove == 'kamień' && playerMove == 'papier'){
+	printMessage('Ty wygrywasz!');
+}
+else if(computerMove == 'kamień' && playerMove == 'kamień'){
+	printMessage('Remis!');
+}
+else if(computerMove == 'kamień' && playerMove == 'nożyce'){
+	printMessage('Przegrałeś!');
+}
+else(computerMove == 'kamień' && playerInput == 'deska'){
+	printMessage('Nieznany ruch');
+}
