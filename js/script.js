@@ -19,15 +19,11 @@ function playGame(argPlayerInput) {
         
         if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
             printMessage('Ty wygrywasz!');
-        } else if (argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
-            printMessage('Remis!');
         } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
             printMessage('Przegrywasz!');
         }
-        
-        if (argComputerMove == 'papier' && argPlayerMove == 'papier') {
-            printMessage('Remis!');
-        } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+         
+        if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
             printMessage('Przegrywasz');
         } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
             printMessage('Wygrywasz!');
@@ -37,8 +33,10 @@ function playGame(argPlayerInput) {
             printMessage('Przegrywasz!');
         } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
             printMessage('Wygrywasz!');
-        } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
-            printMessage('Remis!');
+        }
+
+        if (argComputerMove == argPlayerMove) {
+            printMessage('Remis');
         }
     }
 
